@@ -1,0 +1,24 @@
+{
+  "name": "full-backend",
+  "version": "1.0.0",
+  "description": "node.js backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesnguyen22/Node.Js.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend"
+  ],
+  "author": "James Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesnguyen22/Node.Js/issues"
+  },
+  "homepage": "https://github.com/jamesnguyen22/Node.Js#readme"
+}

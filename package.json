@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jamesnguyen22/Node.Js/issues"
   },
-  "homepage": "https://github.com/jamesnguyen22/Node.Js#readme"
+  "homepage": "https://github.com/jamesnguyen22/Node.Js#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
 }

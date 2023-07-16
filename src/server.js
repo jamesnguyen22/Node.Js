@@ -1,37 +1,20 @@
+require('dotenv').config()
 const express = require('express');  //common js
 const { hostname } = require('os');
-const path = require('path');
-require('dotenv').config()
-
-//import express from 'express';
-// console.log(">> check env: ", process.env);
+// const path = require('path');
+const configViewEngine = require('./config/viewEngine');
+const webRoutes = require('./routes/web')
 
 const app = express();   //app express
 const port = process.env.PORT || 8080       //port => hard code
 const host_name = process.env.HOST_NAME;
 
 //config template engine
-app.set('views', path.join(__dirname, 'views'));
+configViewEngine(app);
 
-// app.set('views', './views/')
-app.set('view engine', 'ejs')
+//declare route
+app.use('/', webRoutes);
 
-//config static files
-// app.use(express.static('public'))
-app.use(express.static(path.join(__dirname, 'public')))
-
-app.get('/', (req, res) => {
-    res.send('Hello World with nodemon')
-})
-
-app.get('/abc', (req, res) => {
-    res.send('Check abc')
-})
-
-app.get('/test', (req, res) => {
-    // res.send('sample.ejs')
-    res.render('sample.ejs')
-})
 
 app.listen(port, host_name, () => {
     console.log(`Example app listening on port ${port}`)

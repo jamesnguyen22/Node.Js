@@ -1,7 +1,23 @@
+const connection = require('../config/database')
+
 const getHomepage = (req, res) => {
     //Process
     //Call model
-    res.send('Hello World with nodemon')
+    let users = []
+    connection.query(
+        'SELECT * FROM Users u',
+        function (err, results, fields) {
+            users = results;
+            console.log(">> Results: ", results); // results contains rows returned by server
+
+            // console.log(">> Check Users: ", users)
+            res.send(JSON.stringify(users))
+
+        }
+
+    );
+
+
 }
 
 const getABC = (req, res) => {

@@ -1,5 +1,5 @@
 const express = require('express');
-const { getHomepage, getABC, getTest } = require('../controllers/homeController');
+const { getHomepage, getABC, getTest, postCreateUser } = require('../controllers/homeController');
 const router = express.Router();
 
 // router.get('/', (req, res) => {
@@ -8,14 +8,10 @@ const router = express.Router();
 // })
 
 router.get('/', getHomepage)
-
 router.get('/abc', getABC)
-
-// router.get('/test', (req, res) => {
-//     // res.send('sample.ejs')
-//     res.render('sample.ejs')
-// })
-
 router.get('/test', getTest)
+
+router.post('/create-user', postCreateUser);
+
 
 module.exports = router;  //export default

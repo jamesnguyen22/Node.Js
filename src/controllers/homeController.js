@@ -29,6 +29,12 @@ const getTest = (req, res) => {
     res.render('sample.ejs')
 }
 
+const postCreateUser = (req, res) => {
+    console.log('>> Results: ', req.body);
+    res.send('create a new user')
+}
+
 module.exports = {
-    getHomepage, getABC, getTest
+    getHomepage, getABC, getTest,
+    postCreateUser
 }

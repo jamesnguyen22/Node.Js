@@ -22,13 +22,13 @@ app.use('/', webRoutes);
 
 
 // simple query
-connection.query(
-    'SELECT * FROM Users u',
-    function (err, results, fields) {
-        console.log(">> Results: ", results); // results contains rows returned by server
-        // console.log(">> Fields: ", fields); // fields contains extra meta data about results, if available
-    }
-);
+// connection.query(
+//     'SELECT * FROM Users u',
+//     function (err, results, fields) {
+//         console.log(">> Results: ", results); // results contains rows returned by server
+//         // console.log(">> Fields: ", fields); // fields contains extra meta data about results, if available
+//     }
+// );
 
 app.listen(port, host_name, () => {
     console.log(`Example app listening on port ${port}`)

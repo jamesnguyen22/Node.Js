@@ -12,7 +12,7 @@ router.get('/abc', getABC)
 router.get('/test', getTest)
 router.get('/create', getCreatePage)
 router.post('/create-user', postCreateUser);
-router.get('/update', getUpdatePage)
+router.get('/update/:id', getUpdatePage)
 // router.post('/edit-user', postEditUser);
 
 

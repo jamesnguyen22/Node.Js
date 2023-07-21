@@ -1,5 +1,6 @@
 const express = require('express');
-const { getHomepage, getABC, getTest, getCreatePage, postCreateUser, getUpdatePage, } = require('../controllers/homeController');
+const { getHomepage, getABC, getTest, getCreatePage, postCreateUser,
+    getUpdatePage, postUpdateUser } = require('../controllers/homeController');
 const router = express.Router();
 
 // router.get('/', (req, res) => {
@@ -12,8 +13,9 @@ router.get('/abc', getABC)
 router.get('/test', getTest)
 router.get('/create', getCreatePage)
 router.post('/create-user', postCreateUser);
+
 router.get('/update/:id', getUpdatePage)
-// router.post('/edit-user', postEditUser);
+router.post('/update-user', postUpdateUser);
 
 
 module.exports = router;  //export default
